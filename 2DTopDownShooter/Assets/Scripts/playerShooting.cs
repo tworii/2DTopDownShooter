@@ -14,12 +14,12 @@ public class playerShooting : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-<<<<<<< HEAD
+//<<<<<<< HEAD
 
         useClip = firingPoint.GetComponent<weaponInfo>();
-=======
+//=======
 		useClip = firingPoint.GetComponent<weaponInfo>();
->>>>>>> master
+//>>>>>>> master
 	}
 	
 	// Update is called once per frame
