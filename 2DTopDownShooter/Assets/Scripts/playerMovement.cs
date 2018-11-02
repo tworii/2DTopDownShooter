@@ -7,9 +7,10 @@ public class playerMovement : MonoBehaviour {
 	public float playerX = 0; //player position x
 	public float playerY = 0; //player position y
 	public float moveSpeed = 15.0f; //speed of the player
-	
-	// Use this for initialization
-	void Start () {
+    public Camera m_OrthographicCamera;
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -27,5 +28,10 @@ public class playerMovement : MonoBehaviour {
 			playerX = Input.GetAxisRaw("Horizontal") * moveSpeed * Time.deltaTime;
 			transform.Translate(new Vector3(playerX, 0.0f, 0.0f));
 		}
-	}
+        if (m_OrthographicCamera.orthographicSize == 3.0f)
+        {
+            moveSpeed = 10.0f;
+        }
+
+    }
 }
