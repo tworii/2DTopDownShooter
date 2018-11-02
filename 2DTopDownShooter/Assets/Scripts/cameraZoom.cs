@@ -13,17 +13,18 @@ public class cameraZoom : MonoBehaviour {
     // Update is called once per frame
     void Update() {
 
-        if (Input.GetKey("q"))
+        if (Input.GetKey("space")) //this is just a test value, I should rebind it to getinput at some point
         {
             if (m_OrthographicCamera.orthographicSize == 5.0f)
             {
                 m_OrthographicCamera.orthographicSize = 3.0f;
-            }
+            } //when zoomed in lower movement speed
             
         }
-        else
+        else if (m_OrthographicCamera.orthographicSize == 3.0f)
         {
             m_OrthographicCamera.orthographicSize = 5.0f;
         }
+       
     }
 }

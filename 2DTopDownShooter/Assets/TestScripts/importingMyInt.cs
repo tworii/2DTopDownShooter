@@ -2,14 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DaneMovementScript : MonoBehaviour {
-    [Header("Player Variables")]
-    public float PlayerX = 0;
-    public float PlayerY = 0;
-    public float movementSpeed = 5;
+public class importingMyInt : MonoBehaviour {
+
+
+    public int takenNumber;
 	// Use this for initialization
 	void Start () {
-		
+        takenNumber = StaticScript01.myNumber;
 	}
 	
 	// Update is called once per frame
