@@ -32,6 +32,9 @@ public class playerMovement : MonoBehaviour {
         {
             moveSpeed = 10.0f;
         }
-
+        if (m_OrthographicCamera.orthographicSize == 5.0f)
+        {
+            moveSpeed = 15.0f;
+        }
     }
 }

@@ -6,18 +6,21 @@ public class weaponInfo : MonoBehaviour {
 	[Header("Gun Info")]
 	/*Information about the gun's ammo counts; the total and clip amounts*/
 	private int totalAmmo = 100; //total ammo at the start (information)
-	public int currentAmmo; //current ammo possessed (mutable variable)
+	public static int currentAmmo = 0; //current ammo possessed (mutable variable)
 	private int maxClip = 10; //how much ammo one clip can hold (information)
 	public int currentClip; //current ammo in clip (mutable variable)
-
+    public static int displayClip;
 	// Use this for initialization
 	void Start () {
 		//initialize current ammo to starting ammo
 		//initialze our clip to the max clip
 		currentAmmo = totalAmmo;
 		currentClip = maxClip;
+        displayClip = currentClip;
 	}
-	
+	void Update() {
+        displayClip = currentClip;
+    }
 	public void reload()
 	{
 		//if current clip is 0(empty), then we set current clip to max clip
@@ -26,7 +29,8 @@ public class weaponInfo : MonoBehaviour {
 		{
 			currentClip = maxClip;
 			currentAmmo -= maxClip;
-		}
+            displayClip = currentClip;
+        }
 
 		//of course if total ammo is 0, then nothing happens
 	}
