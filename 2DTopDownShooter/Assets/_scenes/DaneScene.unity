@@ -834,6 +834,7 @@ GameObject:
   - component: {fileID: 877737629}
   - component: {fileID: 877737627}
   - component: {fileID: 877737630}
+  - component: {fileID: 877737631}
   m_Layer: 0
   m_Name: Ninja
   m_TagString: Untagged
@@ -985,6 +986,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentClip: 0
+--- !u!114 &877737631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 877737623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8894bbf428d3677409304bb1ccf8b39c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootingDistance: 300
+  firingPoint: {fileID: 877737626}
 --- !u!1 &925340518
 GameObject:
   m_ObjectHideFlags: 0
